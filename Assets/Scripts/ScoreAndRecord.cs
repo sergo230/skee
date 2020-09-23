@@ -8,10 +8,19 @@ using UnityEngine.UI;
 public class ScoreAndRecord : MonoBehaviour
 {
     public Text ScoreT;
+    [HideInInspector] public RecordLoadAndSave recordSaveAndLoad;
     private int score;
+    private int record;
+
+    private void Awake()
+    {
+        recordSaveAndLoad = GetComponent<RecordLoadAndSave>();
+        recordSaveAndLoad.LoadRecord();
+    }
 
     private void Start()
     {
+        record = recordSaveAndLoad.recordCL.Record;
         score = 0;
         ShowScore();
     }
@@ -24,6 +33,11 @@ public class ScoreAndRecord : MonoBehaviour
     {
         score += editedScore;
         ShowScore();
+        if (score > record)
+        {
+            record = score;
+            recordSaveAndLoad.recordCL.Record = record;
+        }
     }
 
     public void ShowScore()
@@ -34,5 +48,10 @@ public class ScoreAndRecord : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+
+    public int GetRecord()
+    {
+        return record;
     }
 }

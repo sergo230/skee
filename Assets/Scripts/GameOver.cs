@@ -10,7 +10,9 @@ public class GameOver : MonoBehaviour
     public int ValueUpdatingTimer;
     public Text TimerT;
     public GameObject Tablet;
+    public GameObject Enemys , Player;
     public Text ScoreT;
+    public Text RecordT;
     [HideInInspector] public int Timer;
     private ScoreAndRecord scoreAndRecord;
 
@@ -19,6 +21,9 @@ public class GameOver : MonoBehaviour
         scoreAndRecord = GameObject.Find("ScoreAndRecord").GetComponent<ScoreAndRecord>();
 
         Tablet.SetActive(false);
+        Enemys.SetActive(true);
+        Player.SetActive(true);
+        
         StartCoroutine(updateTimer());
         ShowTimer();
     }
@@ -43,9 +48,7 @@ public class GameOver : MonoBehaviour
             ShowTimer();
             if (Timer <= 0)
             {
-                Tablet.SetActive(true);
-                ScoreT.text = scoreAndRecord.GetScore().ToString();
-                StartCoroutine(StopTime());
+                Lose();
                 yield break;
             }
 
@@ -53,6 +56,21 @@ public class GameOver : MonoBehaviour
         }
     }
 
+    public void Lose()
+    {
+        if(!Tablet.activeSelf)
+        {
+            Tablet.SetActive(true);
+            Enemys.SetActive(false);
+            Player.SetActive(false);
+            
+            ScoreT.text = scoreAndRecord.GetScore().ToString();
+            RecordT.text = scoreAndRecord.GetRecord().ToString();
+            
+            StartCoroutine(StopTime());
+        }
+    }
+    
     private IEnumerator StopTime()
     {
         yield return new WaitForSeconds(1.5f);
@@ -61,6 +79,7 @@ public class GameOver : MonoBehaviour
 
     public void RestartFuckingLevel()
     {
+        scoreAndRecord.recordSaveAndLoad.SaveRecord();
         Application.LoadLevel(Application.loadedLevel);
     }
 }

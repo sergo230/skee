@@ -9,10 +9,24 @@ public class Player : MonoBehaviour
 {
     public float PlayerSpeed;
     public Joystick Joystick;
+    private GameOver gameOver;
+
+    private void Start()
+    {
+        gameOver = GameObject.Find("GameOver").GetComponent<GameOver>();
+    }
 
     private void FixedUpdate()
     {
         movePlayer();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            gameOver.Lose();
+        }
     }
 
     private void movePlayer()
