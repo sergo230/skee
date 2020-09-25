@@ -13,6 +13,7 @@ public class GameOver : MonoBehaviour
     public GameObject Enemys , Player;
     public Text ScoreT;
     public Text RecordT;
+    public Text CoinsT;
     [HideInInspector] public int Timer;
 
     private void Start()
@@ -64,6 +65,7 @@ public class GameOver : MonoBehaviour
             
             ScoreT.text = ScoreAndRecord.ScoreAndRecords.GetScore().ToString();
             RecordT.text = ScoreAndRecord.ScoreAndRecords.GetRecord().ToString();
+            CoinsT.text = CoinSpanwer._CoinSpanwer.coinLoadAndSave.coin.Coin.ToString();
             
             StartCoroutine(StopTime());
         }
@@ -77,7 +79,6 @@ public class GameOver : MonoBehaviour
 
     public void RestartFuckingLevel()
     {
-        ScoreAndRecord.ScoreAndRecords.recordSaveAndLoad.SaveRecord();
         Application.LoadLevel(Application.loadedLevel);
     }
 }

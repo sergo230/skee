@@ -15,6 +15,6 @@ public class Coin : MonoBehaviour
     private IEnumerator spawn()
     {
         yield return new WaitForSeconds(0.1f);
-        CoinSpanwer._CoinSpanwer.spawn();
+        CoinSpanwer._CoinSpanwer.TouchPlayerCoin();
     }
 }

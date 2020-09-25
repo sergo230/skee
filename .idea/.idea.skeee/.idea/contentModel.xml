@@ -33,10 +33,12 @@
         <e p="Scripts" t="Include">
           <e p="Acceleration.cs" t="Include" />
           <e p="Coin.cs" t="Include" />
+          <e p="CoinLoadAndSave.cs" t="Include" />
           <e p="CoinSpanwer.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
           <e p="GameOver.cs" t="Include" />
+          <e p="ICoin.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Point.cs" t="Include" />
           <e p="RecordLoadAndSave.cs" t="Include" />
