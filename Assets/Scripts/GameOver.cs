@@ -14,11 +14,9 @@ public class GameOver : MonoBehaviour
     public Text ScoreT;
     public Text RecordT;
     [HideInInspector] public int Timer;
-    private ScoreAndRecord scoreAndRecord;
 
     private void Start()
     {
-        scoreAndRecord = GameObject.Find("ScoreAndRecord").GetComponent<ScoreAndRecord>();
 
         Tablet.SetActive(false);
         Enemys.SetActive(true);
@@ -64,8 +62,8 @@ public class GameOver : MonoBehaviour
             Enemys.SetActive(false);
             Player.SetActive(false);
             
-            ScoreT.text = scoreAndRecord.GetScore().ToString();
-            RecordT.text = scoreAndRecord.GetRecord().ToString();
+            ScoreT.text = ScoreAndRecord.ScoreAndRecords.GetScore().ToString();
+            RecordT.text = ScoreAndRecord.ScoreAndRecords.GetRecord().ToString();
             
             StartCoroutine(StopTime());
         }
@@ -79,7 +77,7 @@ public class GameOver : MonoBehaviour
 
     public void RestartFuckingLevel()
     {
-        scoreAndRecord.recordSaveAndLoad.SaveRecord();
+        ScoreAndRecord.ScoreAndRecords.recordSaveAndLoad.SaveRecord();
         Application.LoadLevel(Application.loadedLevel);
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 //send on gameobject "ScoreAndRecord"
 public class ScoreAndRecord : MonoBehaviour
 {
+    public static ScoreAndRecord ScoreAndRecords { get; private set; }
     public Text ScoreT;
     [HideInInspector] public RecordLoadAndSave recordSaveAndLoad;
     private int score;
@@ -14,6 +15,7 @@ public class ScoreAndRecord : MonoBehaviour
 
     private void Awake()
     {
+        ScoreAndRecords = this;
         recordSaveAndLoad = GetComponent<RecordLoadAndSave>();
         recordSaveAndLoad.LoadRecord();
     }

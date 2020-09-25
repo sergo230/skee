@@ -3,17 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 
 //send on gameobject "SpawnerPoints"
 public class SpawnerPoints : Spawner
 {
-    private ScoreAndRecord scoreAndRecord;
+    public static SpawnerPoints SpawnerPoint { get; private set; }
     private GameOver gameOver;
     private Acceleration acceleration;
+
+    private void Awake()
+    {
+        SpawnerPoint = this;
+    }
+
     private void Start()
     {
-        scoreAndRecord = GameObject.Find("ScoreAndRecord").GetComponent<ScoreAndRecord>();
         gameOver = GameObject.Find("GameOver").GetComponent<GameOver>();
         acceleration = GameObject.Find("Acceleration").GetComponent<Acceleration>();
         spawn();
@@ -26,10 +32,10 @@ public class SpawnerPoints : Spawner
             gameOver.updatingTimer();
             gameOver.ShowTimer();
             acceleration.SpeedUpTime(0.05f);
-            print("ScaleTime = "+Time.timeScale);
-            scoreAndRecord.ScoreEdited(1);
+            ScoreAndRecord.ScoreAndRecords.ScoreEdited(1);
             Destroy(spawningObj);
         }
+
         base.spawn();
     }
 }

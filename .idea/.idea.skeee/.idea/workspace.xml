@@ -21,13 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="f607daa2-ebb2-4af1-8c3c-7340d173ff64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Point.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Point.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Record.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Record.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Point.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Point.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnerPoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnerPoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/record.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/record.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Acceleration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Coin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/_coin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnerPoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameOver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,16 +55,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Point.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnerPoints.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Acceleration.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/record.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RecordLoadAndSave.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/record.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Point.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Coin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnerPoints.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinSpanwer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/_coin.cs" />
       </list>
     </option>
   </component>
@@ -106,7 +114,12 @@
       <workItem from="1600860009312" duration="6453000" />
       <workItem from="1600874382908" duration="1651000" />
       <workItem from="1600880467095" duration="1526000" />
-      <workItem from="1600888708624" duration="3134000" />
+      <workItem from="1600888708624" duration="3733000" />
+      <workItem from="1600923253141" duration="809000" />
+      <workItem from="1600924326792" duration="945000" />
+      <workItem from="1600925598860" duration="6000" />
+      <workItem from="1600972115918" duration="1163000" />
+      <workItem from="1601007990483" duration="401000" />
     </task>
     <servers />
   </component>
@@ -125,6 +138,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
