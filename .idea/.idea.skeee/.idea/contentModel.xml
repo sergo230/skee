@@ -35,16 +35,23 @@
           <e p="Coin.cs" t="Include" />
           <e p="CoinLoadAndSave.cs" t="Include" />
           <e p="CoinSpanwer.cs" t="Include" />
+          <e p="DEBUG SCRIPTS" t="Include">
+            <e p="DELETE_PLAYERPREFS.cs" t="Include" />
+          </e>
           <e p="Enemy.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
+          <e p="GameFiles.cs" t="Include" />
           <e p="GameOver.cs" t="Include" />
           <e p="ICoin.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Point.cs" t="Include" />
           <e p="RecordLoadAndSave.cs" t="Include" />
+          <e p="Scene.cs" t="Include" />
           <e p="ScoreAndRecord.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
           <e p="SpawnerPoints.cs" t="Include" />
+          <e p="StartingScreen.cs" t="Include" />
+          <e p="Training.cs" t="Include" />
           <e p="_coin.cs" t="Include" />
           <e p="record.cs" t="Include" />
         </e>

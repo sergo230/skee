@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class CoinLoadAndSave : MonoBehaviour
+public class CoinLoadAndSave : GameFiles
 {
    
     public string saveFileName;
     [HideInInspector] public _coin coin = new _coin();
     private string path;
+
     [HideInInspector]
-    public void LoadCoins()
+    public override void Load()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
         path = Path.Combine(Application.persistentDataPath, saveFileName + ".json");
@@ -28,7 +29,7 @@ public class CoinLoadAndSave : MonoBehaviour
         }
     }
 
-    public void SaveCoin()
+    public override void Save()
     {
         File.WriteAllText(path, JsonUtility.ToJson(coin));
     }
@@ -36,11 +37,11 @@ public class CoinLoadAndSave : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     private void OnApplicationPause(bool pauseStatus)
     {
-        if(pauseStatus) SaveCoin();
+        if(pauseStatus) Save();
     }
 #endif
     private void OnApplicationQuit()
     {
-        SaveCoin();
+        Save();
     }
 }

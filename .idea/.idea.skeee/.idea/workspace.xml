@@ -22,11 +22,16 @@
     <list default="true" id="f607daa2-ebb2-4af1-8c3c-7340d173ff64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.skeee/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/LoseTable/spawn.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/LoseTable/spawn.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Coins.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Coins.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Record.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Record.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Coin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinLoadAndSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinLoadAndSave.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinSpanwer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinSpanwer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RecordLoadAndSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RecordLoadAndSave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +45,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ICoin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Acceleration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Training.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Coin.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/_coin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoinLoadAndSave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnerPoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameOver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/_coin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameFiles.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -54,20 +61,25 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Acceleration.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RecordLoadAndSave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/record.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Point.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnerPoints.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/_coin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ICoin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CoinLoadAndSave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Coin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CoinSpanwer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StartingScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameOver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Training.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameFiles.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinLoadAndSave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinSpanwer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreAndRecord.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RecordLoadAndSave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DEBUG SCRIPTS/DELETE_PLAYERPREFS.cs" />
       </list>
     </option>
   </component>
@@ -121,7 +133,11 @@
       <workItem from="1600972115918" duration="1163000" />
       <workItem from="1601007990483" duration="401000" />
       <workItem from="1601010275525" duration="154000" />
-      <workItem from="1601064633487" duration="2230000" />
+      <workItem from="1601064633487" duration="2327000" />
+      <workItem from="1601152108827" duration="1246000" />
+      <workItem from="1601192563390" duration="3493000" />
+      <workItem from="1601316623058" duration="1417000" />
+      <workItem from="1601319039199" duration="640000" />
     </task>
     <servers />
   </component>

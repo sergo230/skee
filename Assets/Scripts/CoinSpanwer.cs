@@ -20,7 +20,9 @@ public class CoinSpanwer : Spawner , ICoin
     private void Start()
     {
         coinLoadAndSave = GetComponent<CoinLoadAndSave>();
-        coinLoadAndSave.LoadCoins();
+        //load coins 
+        coinLoadAndSave.Load();
+        
         ShowCoins(coinLoadAndSave.coin.Coin);
         StartCoroutine(spawnCoin());
     }

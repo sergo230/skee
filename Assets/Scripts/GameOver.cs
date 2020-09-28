@@ -10,7 +10,7 @@ public class GameOver : MonoBehaviour
     public int ValueUpdatingTimer;
     public Text TimerT;
     public GameObject Tablet;
-    public GameObject Enemys , Player;
+    public GameObject Enemys, Player;
     public Text ScoreT;
     public Text RecordT;
     public Text CoinsT;
@@ -18,11 +18,10 @@ public class GameOver : MonoBehaviour
 
     private void Start()
     {
-
         Tablet.SetActive(false);
         Enemys.SetActive(true);
         Player.SetActive(true);
-        
+
         StartCoroutine(updateTimer());
         ShowTimer();
     }
@@ -57,24 +56,16 @@ public class GameOver : MonoBehaviour
 
     public void Lose()
     {
-        if(!Tablet.activeSelf)
+        if (!Tablet.activeSelf)
         {
             Tablet.SetActive(true);
             Enemys.SetActive(false);
             Player.SetActive(false);
-            
+
             ScoreT.text = ScoreAndRecord.ScoreAndRecords.GetScore().ToString();
             RecordT.text = ScoreAndRecord.ScoreAndRecords.GetRecord().ToString();
             CoinsT.text = CoinSpanwer._CoinSpanwer.coinLoadAndSave.coin.Coin.ToString();
-            
-            StartCoroutine(StopTime());
         }
-    }
-    
-    private IEnumerator StopTime()
-    {
-        yield return new WaitForSeconds(1.5f);
-        Time.timeScale = 0;
     }
 
     public void RestartFuckingLevel()

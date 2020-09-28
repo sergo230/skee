@@ -17,7 +17,9 @@ public class ScoreAndRecord : MonoBehaviour
     {
         ScoreAndRecords = this;
         recordSaveAndLoad = GetComponent<RecordLoadAndSave>();
-        recordSaveAndLoad.LoadRecord();
+        
+        //load record
+        recordSaveAndLoad.Load();
     }
 
     private void Start()
@@ -25,6 +27,8 @@ public class ScoreAndRecord : MonoBehaviour
         record = recordSaveAndLoad.recordCL.Record;
         score = 0;
         ShowScore();
+        
+        
     }
 
     /// <summary>

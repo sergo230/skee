@@ -5,13 +5,13 @@ using System.IO;
 using UnityEngine;
 
 //send on gameobject "ScoreAndRecord"
-public class RecordLoadAndSave : MonoBehaviour
+public class RecordLoadAndSave : GameFiles
 {
     public string saveFileName;
     [HideInInspector] public record recordCL = new record();
     private string path;
-[HideInInspector]
-    public void LoadRecord()
+
+    public override void Load()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
         path = Path.Combine(Application.persistentDataPath, saveFileName + ".json");
@@ -29,7 +29,7 @@ public class RecordLoadAndSave : MonoBehaviour
         }
     }
 
-    public void SaveRecord()
+    public override void Save()
     {
         File.WriteAllText(path, JsonUtility.ToJson(recordCL));
     }
@@ -37,11 +37,11 @@ public class RecordLoadAndSave : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     private void OnApplicationPause(bool pauseStatus)
     {
-        if(pauseStatus) SaveRecord();
+        if(pauseStatus) Save();
     }
 #endif
     private void OnApplicationQuit()
     {
-        SaveRecord();
+        Save();
     }
 }
